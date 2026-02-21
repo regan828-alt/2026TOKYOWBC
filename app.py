@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import folium
 from streamlit_folium import st_folium
+import os
 
 # 設定 App 基本資訊
 st.set_page_config(page_title="東京熱血之旅", page_icon="🗼", layout="centered")
@@ -16,7 +17,11 @@ with tab1:
     st.header("行程明細與導航")
     
     with st.expander("Day 1 (3/8): 熱血開局，直衝大巨蛋", expanded=True):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Tokyo_Dome_2020.jpg/800px-Tokyo_Dome_2020.jpg", use_container_width=True)
+        if os.path.exists("day1.jpg"):
+            st.image("day1.jpg", use_container_width=True)
+        else:
+            st.info("📷 提示：請在 GitHub 上傳命名為 day1.jpg 的圖片即可顯示")
+            
         st.write("**08:00** | 抵達淺草，先至「住一淺草一號店」寄放行李")
         st.markdown("[📍 一鍵導航至飯店](https://www.google.com/maps/search/?api=1&query=住一淺草一號店)")
         st.write("**11:00** | 抵達東京巨蛋觀看 WBC 台灣 VS 韓國 (午餐吃球場便當)")
@@ -27,16 +32,24 @@ with tab1:
         st.markdown("[📍 一鍵導航至牛舌檸檬](https://www.google.com/maps/search/?api=1&query=浅草+牛たん+檸檬)")
 
     with st.expander("Day 2 (3/9): 寶可夢樂園與迷幻新宿"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Shinjuku_Skyline_at_Night.jpg/800px-Shinjuku_Skyline_at_Night.jpg", use_container_width=True)
+        if os.path.exists("day2.jpg"):
+            st.image("day2.jpg", use_container_width=True)
+        else:
+            st.info("📷 提示：請在 GitHub 上傳命名為 day2.jpg 的圖片即可顯示")
+            
         st.write("**11:00** | 讀賣樂園 (新開幕寶可夢主題樂園)")
         st.markdown("[📍 一鍵導航至讀賣樂園](https://www.google.com/maps/search/?api=1&query=讀賣樂園)")
-        st.write("**傍晚** | 新宿繁華街頭，帶著富士相機用底片模擬來場高質感街拍")
+        st.write("**傍晚** | 新宿繁華街頭，帶著相機用底片模擬來場高質感街拍")
         st.markdown("[📍 一鍵導航至新宿](https://www.google.com/maps/search/?api=1&query=新宿)")
         st.write("**20:00** | 晚餐：新宿 神戶屋燒肉")
         st.markdown("[📍 一鍵導航至神戶屋](https://www.google.com/maps/search/?api=1&query=新宿+神戶屋)")
         
     with st.expander("Day 3 (3/10): 次文化尋寶與頂級夜生活"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Nakano_Broadway_entrance_2.jpg/800px-Nakano_Broadway_entrance_2.jpg", use_container_width=True)
+        if os.path.exists("day3.jpg"):
+            st.image("day3.jpg", use_container_width=True)
+        else:
+            st.info("📷 提示：請在 GitHub 上傳命名為 day3.jpg 的圖片即可顯示")
+            
         st.write("**上午** | 淺草寺周邊清晨散策")
         st.write("**下午** | 中野百老匯挖寶 (尋找絕版漫畫與老玩具)")
         st.markdown("[📍 一鍵導航至中野百老匯](https://www.google.com/maps/search/?api=1&query=中野百老匯)")
@@ -44,13 +57,21 @@ with tab1:
         st.markdown("[📍 一鍵導航至 63ANGEL](https://www.google.com/maps/search/?api=1&query=63ANGEL)")
 
     with st.expander("Day 4 (3/11): 伊豆海岸線放鬆一日遊"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Kadowakizaki_Suspension_Bridge_01.jpg/800px-Kadowakizaki_Suspension_Bridge_01.jpg", use_container_width=True)
+        if os.path.exists("day4.jpg"):
+            st.image("day4.jpg", use_container_width=True)
+        else:
+            st.info("📷 提示：請在 GitHub 上傳命名為 day4.jpg 的圖片即可顯示")
+            
         st.write("**上午** | 搭乘特急踊子號前往伊豆")
         st.write("**下午** | 城崎海岸、門脇吊橋壯闊風景攝影與泡日歸溫泉")
         st.markdown("[📍 一鍵導航至城崎海岸](https://www.google.com/maps/search/?api=1&query=城崎海岸)")
 
     with st.expander("Day 5 & 6 (3/12 - 3/13): 美食與歸途"):
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ameyoko_Tokyo_2016.jpg/800px-Ameyoko_Tokyo_2016.jpg", use_container_width=True)
+        if os.path.exists("day5.jpg"):
+            st.image("day5.jpg", use_container_width=True)
+        else:
+            st.info("📷 提示：請在 GitHub 上傳命名為 day5.jpg 的圖片即可顯示")
+            
         st.write("**3/12 上午** | 築地市場大啖海鮮")
         st.markdown("[📍 一鍵導航至築地市場](https://www.google.com/maps/search/?api=1&query=築地場外市場)")
         st.write("**3/12 下午** | 上野阿美橫町 (採買藥妝，記得多挑幾款肉泥回去給家裡的布偶貓！)")
