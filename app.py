@@ -4,7 +4,7 @@ import folium
 from streamlit_folium import st_folium
 
 # 設定 App 基本資訊
-st.set_page_config(page_title=東京熱血之旅, page_icon=🗼, layout=centered)
+st.set_page_config(page_title="東京熱血之旅", page_icon="🗼", layout="centered")
 st.title(🗼 6天5夜 東京熱血之旅)
 st.write(出發：38 捷星 GK012  回程：313 星宇 JX805)
 
